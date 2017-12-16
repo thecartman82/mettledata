@@ -7,5 +7,5 @@ const app = require('../src/app');
 app.start({
 	port: process.env.PORT,
 	public_url: process.env.PUBLIC_URL,
-	cache_templates: process.env.NODE_ENV === 'production'
+	enable_cache: process.env.NODE_ENV === 'production'
 });

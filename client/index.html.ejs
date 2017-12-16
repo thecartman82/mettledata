@@ -4,14 +4,77 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
 	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Mettledata</title>
+    <link rel="stylesheet" href="styles/index.css" />
+	<link rel="iframely player" type="text/html"
+			href="<%= publicUrl %>"
+			media="(min-width:100) and (min-height:100)"
+			title="OPEN"/>
 </head>
 <body>
+<div id="App">
 	<h1>Mettledata</h1>
-	<p>
-		<a href="<%= publicUrl %>"><%= publicUrl %></a>
-	</p>
+
+	<mettle-table v-bind:mettles="mettles"></mettle-table>
+</div>
+
+<script type="text/x-template" id="mettle-table-template">
+	<table class="MettleTable">
+		<thead>
+		<tr>
+			<th colspan="3"></th>
+			<th colspan="5" class="MettleTable-double-header">Mettle stages</th>
+			<th colspan="10"></th>
+		</tr>
+		<tr>
+			<th>Episode</th>
+			<th>Task</th>
+			<th>Language</th>
+            <th>Got lines</th>
+            <th>Got fields</th>
+            <th>Filtered</th>
+            <th>Sorted</th>
+            <th>Output</th>
+            <th>Comments</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr v-for="mettle in mettles">
+			<td>
+				<a :href="mettle.link" target="_blank">{{mettle.episode}}</a>
+			</td>
+			<td>{{mettle.task}}</td>
+			<td>{{mettle.language}}</td>
+            <td>{{mettle.fruit_stages && mettle.fruit_stages.got_lines}}</td>
+            <td>{{mettle.fruit_stages && mettle.fruit_stages.got_fields}}</td>
+            <td>{{mettle.fruit_stages && mettle.fruit_stages.filtered}}</td>
+            <td>{{mettle.fruit_stages && mettle.fruit_stages.sorted}}</td>
+            <td>{{mettle.fruit_stages && mettle.fruit_stages.output}}</td>
+            <td>{{mettle.comments}}</td>
+		</tr>
+		</tbody>
+	</table>
+</script>
+
+<script src="https://unpkg.com/vue@2.5.11/dist/vue.js"></script>
+
+<script>
+	var DATA = JSON.parse(<%- dataJSON %>);
+
+	Vue.component('mettle-table', {
+		template: '#mettle-table-template',
+		props: ['mettles']
+	})
+
+	new Vue({
+		el: '#App',
+		methods: {},
+		data: {
+			mettles: DATA.mettles
+		}
+	});
+</script>
 </body>
 </html>

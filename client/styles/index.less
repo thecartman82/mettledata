@@ -1,0 +1,49 @@
+@import "pallete";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+	margin: 25px;
+}
+
+h1 {
+	font-weight: bold;
+	color: @color-primary-1;
+}
+
+.MettleTable {
+	border-collapse: collapse;
+
+	@border: 1px solid @color-primary-4;
+
+	&-double-header {
+		border-bottom: @border;
+	}
+
+	thead {
+		color: @color-primary-4;
+		> tr:nth-child(2) {
+			background-color: @color-secondary-1-1;
+			th {
+				padding: 5px 10px;
+				border-bottom: @border;
+				&:not(:last-child) {
+					border-right: @border;
+				}
+			}
+		}
+	}
+	
+	tbody {
+		td {
+			padding: 5px;
+
+			&:not(:last-child) {
+				border-right: @border;
+			}
+		}
+	}
+}

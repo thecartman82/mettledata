@@ -2,7 +2,7 @@ mettles:
 
   - episode: "S01E01"
     link: https://what.thedailywtf.com/post/341009
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: ~
@@ -19,7 +19,7 @@ mettles:
 
   - episode: "S01E02"
     link: https://what.thedailywtf.com/post/361920
-    test: fruits
+    task: fruits
     language: "C#"
     fruit_stages:
       got_lines: true
@@ -35,7 +35,7 @@ mettles:
 
   - episode: "S01E03"
     link: https://what.thedailywtf.com/post/366044
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: false
@@ -51,7 +51,7 @@ mettles:
 
   - episode: "S01E04"
     link: https://what.thedailywtf.com/post/824831
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: true
@@ -67,7 +67,7 @@ mettles:
 
   - episode: "S02E01"
     link: https://what.thedailywtf.com/post/992426
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -83,7 +83,7 @@ mettles:
 
   - episode: "S02E02"
     link: https://what.thedailywtf.com/post/993051
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -99,7 +99,7 @@ mettles:
 
   - episode: "S02E03"
     link: https://what.thedailywtf.com/post/1017649
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: true
@@ -115,7 +115,7 @@ mettles:
 
   - episode: "S02E04"
     link: https://what.thedailywtf.com/post/1020827
-    test: fruits
+    task: fruits
     language: "JavaScript?"
     fruit_stages:
       got_lines: false
@@ -131,8 +131,9 @@ mettles:
 
   - episode: "S04E01"
     link: https://what.thedailywtf.com/post/1083382
-    test: fruits
-    language: "¯\_(ツ)_/¯"
+    task: fruits
+    language: >
+      ¯\_(ツ)_/¯
     fruit_stages:
       got_lines: false
       got_fields: false
@@ -147,7 +148,7 @@ mettles:
 
   - episode: "S04E02"
     link: https://what.thedailywtf.com/post/1085596
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -163,7 +164,7 @@ mettles:
 
   - episode: "S04E03"
     link: https://what.thedailywtf.com/post/1089614
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -179,7 +180,7 @@ mettles:
 
   - episode: "S04EMSS"
     link: https://what.thedailywtf.com/post/1090832
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: true
@@ -195,7 +196,7 @@ mettles:
 
   - episode: "S04E04"
     link: https://what.thedailywtf.com/post/1096348
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -211,7 +212,7 @@ mettles:
 
   - episode: "S04E05"
     link: https://what.thedailywtf.com/post/1128151
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -227,14 +228,9 @@ mettles:
 
   - episode: "S05E01"
     link: https://what.thedailywtf.com/post/1135001
-    test: frontend
+    task: frontend
     language: "JavaScript"
-    fruit_stages:
-      got_lines: "-"
-      got_fields: "-"
-      filtered: ""
-      sorted: "-"
-      output: "-"
+    fruit_stages: ~
     comments: >
       Columns n/a: alternative front-end test. Failed.
     recommended: false
@@ -243,7 +239,7 @@ mettles:
 
   - episode: "S05E02"
     link: https://what.thedailywtf.com/post/1171845
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -259,7 +255,7 @@ mettles:
 
   - episode: "S05E03"
     link: https://what.thedailywtf.com/post/1172314
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -275,14 +271,9 @@ mettles:
 
   - episode: "S05E04"
     link: https://what.thedailywtf.com/post/1174835
-    test: frontend
+    task: frontend
     language: "JavaScript"
-    fruit_stages:
-      got_lines: "-"
-      got_fields: "-"
-      filtered: ""
-      sorted: "-"
-      output: "-"
+    fruit_stages: ~
     comments: >
       Columns n/a: alternative front-end test. Failed.
     recommended: false
@@ -291,7 +282,7 @@ mettles:
 
   - episode: "S05E05"
     link: https://what.thedailywtf.com/post/1176317
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -307,7 +298,7 @@ mettles:
 
   - episode: "S05E06"
     link: https://what.thedailywtf.com/post/1181956
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: true
@@ -323,7 +314,7 @@ mettles:
 
   - episode: "S05E07"
     link: https://what.thedailywtf.com/post/1182399
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -339,7 +330,7 @@ mettles:
 
   - episode: "S05E08"
     link: https://what.thedailywtf.com/post/1184107
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -355,7 +346,7 @@ mettles:
 
   - episode: "S05E09"
     link: https://what.thedailywtf.com/post/1186489
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -371,7 +362,7 @@ mettles:
 
   - episode: "S06E01"
     link: https://what.thedailywtf.com/post/1194330
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -387,7 +378,7 @@ mettles:
 
   - episode: "S06E02"
     link: https://what.thedailywtf.com/post/1195241
-    test: fruits
+    task: fruits
     language: "JavaScript"
     fruit_stages:
       got_lines: true
@@ -403,7 +394,7 @@ mettles:
 
   - episode: "S07E01"
     link: https://what.thedailywtf.com/post/1274572
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: true
@@ -419,7 +410,7 @@ mettles:
 
   - episode: "S07E02"
     link: https://what.thedailywtf.com/post/1274778
-    test: fruits
+    task: fruits
     language: "PHP"
     fruit_stages:
       got_lines: false

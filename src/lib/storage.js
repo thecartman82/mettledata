@@ -9,10 +9,10 @@ const tools = require('./tools');
 const DATA_PATH = libPath.resolve(__dirname, '../../data/data.enc.json');
 const MASTER_PATH = libPath.resolve(__dirname, '../../data/data.yaml');
 
-async function loadData() {
+async function loadDataJSON() {
 	const jsonEncStr = await tools.readFileAsync(DATA_PATH);
 	const jsonStr = crypto.decrypt(jsonEncStr);
-	return JSON.parse(jsonStr);
+	return jsonStr;
 }
 
 // TODO: Convert everything to async?
@@ -42,7 +42,7 @@ module.exports = {
 	DATA_PATH,
 	MASTER_PATH,
 
-	loadData,
+	loadDataJSON,
 	loadDataSync,
 	loadMasterSync,
 	writeDataSync,

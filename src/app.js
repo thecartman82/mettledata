@@ -7,6 +7,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const koaStatic = require('koa-static');
 const koaLogger = require('koa-logger');
+const koaLess = require('koa-less');
 
 const storage = require('./lib/storage');
 const tools = require('./lib/tools');
@@ -14,7 +15,7 @@ const tools = require('./lib/tools');
 const DEFAULT_OPTIONS = {
 	port: 3000,
 	public_url: null,
-	cache_templates: false
+	enable_cache: false
 };
 
 const CLIENT_DIR = libPath.resolve(__dirname, '../client');
@@ -26,56 +27,55 @@ function start(options = DEFAULT_OPTIONS) {
 		throw new Error(`PUBLIC_URL not provided, check your .env`);
 	}
 
-	if (!options.cache_templates) {
-		console.error(`Warning: templates will not be cached`);
+	if (!options.enable_cache) {
+		console.error(`Warning: data and templates will not be cached`);
 	}
 
 	const app = new Koa();
 
 	app.use(koaLogger());
-	publicRouter(app, options);
+
+	initRouter(app, options);
+
+	app.use(koaLess(CLIENT_DIR, {
+		force: !options.enable_cache
+	}));
 	app.use(koaStatic(CLIENT_DIR));
-	apiRouter(app, options);
 
 	app.listen(options.port, () => {
 		console.log(`Listening on ${options.port}`)
 	});
 }
 
-function publicRouter(app, options) {
+function initRouter(app, options) {
 	const router = new Router({
 		prefix: '/'
 	});
 
-	let indexTemplate = null;
+	const _cache = options.cache_templates ? {} : null;
 
 	router.get('/', async (ctx, next) => {
+		let indexTemplate = _cache && _cache.indexTemplate;
 		if (!indexTemplate) {
 			const templateStr = await tools.readFileAsync(libPath.resolve(CLIENT_DIR, 'index.html.ejs'));
 			indexTemplate = libEjs.compile(templateStr);
+			if (_cache) {
+				_cache.indexTemplate = indexTemplate;
+			}
+		}
+
+		let data = _cache && _cache.data;
+		if (!data) {
+			data = JSON.stringify(await storage.loadDataJSON());
+			if (_cache) {
+				_cache.data = data;
+			}
 		}
 
 		ctx.body = indexTemplate({
-			publicUrl: options.public_url
+			publicUrl: options.public_url,
+			dataJSON: data
 		});
-
-		if (!options.cache_templates) {
-			indexTemplate = null;
-		}
-	});
-
-	app.use(router.routes());
-	app.use(router.allowedMethods());
-}
-
-function apiRouter(app, options) {
-	const router = new Router({
-		prefix: '/api'
-	});
-
-	router.get('/data', async (ctx, next) => {
-		const data = await storage.loadData();
-		ctx.body = data;
 	});
 
 	app.use(router.routes());
