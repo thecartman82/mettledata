@@ -28,6 +28,7 @@ h1 {
 		> tr:nth-child(2) {
 			background-color: @color-secondary-1-1;
 			th {
+				white-space: nowrap;
 				padding: 5px 10px;
 				border-bottom: @border;
 				&:not(:last-child) {
@@ -38,8 +39,14 @@ h1 {
 	}
 	
 	tbody {
+		tr {
+			&:hover {
+				background-color: rgba(0,0,0,0.1);
+			}
+		}
 		td {
 			padding: 5px;
+			vertical-align: top;
 
 			&:not(:last-child) {
 				border-right: @border;
