@@ -1,7 +1,21 @@
 {
 	"name": "mettledata",
 	"version": "0.0.1",
+	"main": "bin/mettledata",
+	"scripts": {
+		"start": "node bin/mettledata"
+	},
+	"engines": {
+		"node": "8.x"
+	},
 	"dependencies": {
-		"js-yaml": "^3.10.0"
+		"dotenv": "^4.0.0",
+		"ejs": "^2.5.7",
+		"js-yaml": "^3.10.0",
+		"koa": "^2.4.1",
+		"koa-logger": "^3.1.0",
+		"koa-router": "^7.3.0",
+		"koa-static": "^4.0.2",
+		"lodash": "^4.17.4"
 	}
 }

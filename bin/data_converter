@@ -1,14 +1,6 @@
 #!/usr/bin/env node
 
-const libFs = require('fs');
-const libPath = require('path');
-
-const libYaml = require('js-yaml');
-
-const tools = require('../lib/tools');
-
-const yamlPath = libPath.resolve(__dirname, '../data/data.yaml');
-const jsonPath = libPath.resolve(__dirname, '../data/data.enc.json');
+const storage = require('../src/lib/storage');
 
 const OPS = {
 	load: 'load',
@@ -32,23 +24,17 @@ if (op === OPS.load) {
 // *********************************************************************************************************************
 
 function load() {
-	console.log(`Loading data from ${jsonPath}`);
-	const jsonEncStr = libFs.readFileSync(jsonPath, 'utf8');
-	const jsonStr = tools.decrypt(jsonEncStr);
-	const data = JSON.parse(jsonStr);
-	const yaml = libYaml.safeDump(data);
-	libFs.writeFileSync(yamlPath, yaml, 'utf8');
-	console.log(`Written to ${yamlPath}`);
+	console.log(`Loading data from ${storage.DATA_PATH}`);
+	const data = storage.loadDataSync();
+	storage.writeMasterSync(data);
+	console.log(`Written to ${storage.MASTER_PATH}`);
 }
 
 function save() {
-	console.log(`Loading data from ${yamlPath}`);
-	const yaml = libFs.readFileSync(yamlPath, 'utf8');
-	const data = libYaml.safeLoad(yaml);
-	const jsonStr = JSON.stringify(data);
-	const jsonEncStr = tools.encrypt(jsonStr);
-	libFs.writeFileSync(jsonPath, jsonEncStr, 'utf8');
-	console.log(`Written to ${jsonPath}`);
+	console.log(`Loading data from ${storage.MASTER_PATH}`);
+	const data = storage.loadMasterSync();
+	storage.writeDataSync(data);
+	console.log(`Written to ${storage.DATA_PATH}`);
 }
 
 function fatal(msg) {
