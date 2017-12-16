@@ -1,0 +1,434 @@
+mettles:
+
+  - episode: "S01E01"
+    link: https://what.thedailywtf.com/post/341009
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: ~
+      got_fields: ~
+      filtered: ~
+      sorted: ~
+      output: ~
+    correctness: 0
+    comments: >
+      ""
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S01E02"
+    link: https://what.thedailywtf.com/post/361920
+    test: fruits
+    language: "C#"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "descended into 'randomly change things and hope something happens' mode"
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S01E03"
+    link: https://what.thedailywtf.com/post/366044
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: false
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      Read separate lines, but never put them in a collection.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S01E04"
+    link: https://what.thedailywtf.com/post/824831
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: ""
+      sorted: false
+      output: false
+    comments: >
+      PHP + @cartman82 didn't say again; need someone to check.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S02E01"
+    link: https://what.thedailywtf.com/post/992426
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      Finished challenge!
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S02E02"
+    link: https://what.thedailywtf.com/post/993051
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      Finished challenge!
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S02E03"
+    link: https://what.thedailywtf.com/post/1017649
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "10 year veteran" "I never worked with files"
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S02E04"
+    link: https://what.thedailywtf.com/post/1020827
+    test: fruits
+    language: "JavaScript?"
+    fruit_stages:
+      got_lines: false
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      Gave up. No code at all, just HTML.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04E01"
+    link: https://what.thedailywtf.com/post/1083382
+    test: fruits
+    language: "¯\_(ツ)_/¯"
+    fruit_stages:
+      got_lines: false
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      Noped out after HTML again.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04E02"
+    link: https://what.thedailywtf.com/post/1085596
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      ?	Unclear whether there was appropriate output. Linked post is from the middle of a canceled refactor.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04E03"
+    link: https://what.thedailywtf.com/post/1089614
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      Finished challenge!
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04EMSS"
+    link: https://what.thedailywtf.com/post/1090832
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      Finished challenge! "Mid-Season Special"
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04E04"
+    link: https://what.thedailywtf.com/post/1096348
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: true
+    comments: >
+      Finished challenge!
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S04E05"
+    link: https://what.thedailywtf.com/post/1128151
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: false
+      sorted: true
+      output: true
+    comments: >
+      Also completely removed items with duplicates, instead of just the instances after the first.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E01"
+    link: https://what.thedailywtf.com/post/1135001
+    test: frontend
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: "-"
+      got_fields: "-"
+      filtered: ""
+      sorted: "-"
+      output: "-"
+    comments: >
+      Columns n/a: alternative front-end test. Failed.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E02"
+    link: https://what.thedailywtf.com/post/1171845
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "He has the talk, but didn't demonstrate the walk."
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E03"
+    link: https://what.thedailywtf.com/post/1172314
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "He stood up, walked into the kitchen in his boxer shorts, on camera, and is now making coffee."
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E04"
+    link: https://what.thedailywtf.com/post/1174835
+    test: frontend
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: "-"
+      got_fields: "-"
+      filtered: ""
+      sorted: "-"
+      output: "-"
+    comments: >
+      Columns n/a: alternative front-end test. Failed.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E05"
+    link: https://what.thedailywtf.com/post/1176317
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: false
+      sorted: true
+      output: true
+    comments: >
+      Filtering includes deduplicating, which wasn't done.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E06"
+    link: https://what.thedailywtf.com/post/1181956
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      https://i1.theportalwiki.net/img/f/fa/Adventure_core_babble30.wav
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E07"
+    link: https://what.thedailywtf.com/post/1182399
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "Lack of regex knowledge is killing him. That and slowness."
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E08"
+    link: https://what.thedailywtf.com/post/1184107
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      "he has it all handed [to him] there, the entire structure. All he needs is one extra character." Failed front-end test too.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S05E09"
+    link: https://what.thedailywtf.com/post/1186489
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: true
+      output: false
+    comments: >
+      Marked false for output because of an off-by-one error.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S06E01"
+    link: https://what.thedailywtf.com/post/1194330
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: "Y?"
+      output: true
+    comments: >
+      It's not clear from the thread whether the candidate actually did the sorting or not. Tentative success.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S06E02"
+    link: https://what.thedailywtf.com/post/1195241
+    test: fruits
+    language: "JavaScript"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: true
+      sorted: "Y?"
+      output: "Y?"
+    comments: >
+      Thread strongly implies success on all counts, but not evidenced.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S07E01"
+    link: https://what.thedailywtf.com/post/1274572
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: true
+      got_fields: true
+      filtered: false
+      sorted: true
+      output: true
+    comments: >
+      Missed requirement: multiplying price/unit by units. This test version does not include filtering, and that was put in its column.
+    recommended: false
+    hired: false
+    post_mortem: null
+
+  - episode: "S07E02"
+    link: https://what.thedailywtf.com/post/1274778
+    test: fruits
+    language: "PHP"
+    fruit_stages:
+      got_lines: false
+      got_fields: false
+      filtered: false
+      sorted: false
+      output: false
+    comments: >
+      @Cartman82 gave him the answer for line splitting, so not 'Y'.
+    recommended: false
+    hired: false
+    post_mortem: null

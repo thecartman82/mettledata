@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+
+const libFs = require('fs');
+const libPath = require('path');
+
+const libYaml = require('js-yaml');
+
+const tools = require('../lib/tools');
+
+const yamlPath = libPath.resolve(__dirname, '../data/data.yaml');
+const jsonPath = libPath.resolve(__dirname, '../data/data.enc.json');
+
+const OPS = {
+	load: 'load',
+	save: 'save',
+};
+
+const op = process.argv[2];
+if (!op) {
+	fatal(`You must provide operation as argument: "load" or "save"`);
+}
+if (!OPS[op]) {
+	fatal(`Invalid operation: ${op}`);
+}
+
+if (op === OPS.load) {
+	load();
+} else {
+	save();
+}
+
+// *********************************************************************************************************************
+
+function load() {
+	console.log(`Loading data from ${jsonPath}`);
+	const jsonEncStr = libFs.readFileSync(jsonPath, 'utf8');
+	const jsonStr = tools.decrypt(jsonEncStr);
+	const data = JSON.parse(jsonStr);
+	const yaml = libYaml.safeDump(data);
+	libFs.writeFileSync(yamlPath, yaml, 'utf8');
+	console.log(`Written to ${yamlPath}`);
+}
+
+function save() {
+	console.log(`Loading data from ${yamlPath}`);
+	const yaml = libFs.readFileSync(yamlPath, 'utf8');
+	const data = libYaml.safeLoad(yaml);
+	const jsonStr = JSON.stringify(data);
+	const jsonEncStr = tools.encrypt(jsonStr);
+	libFs.writeFileSync(jsonPath, jsonEncStr, 'utf8');
+	console.log(`Written to ${jsonPath}`);
+}
+
+function fatal(msg) {
+	console.error(msg);
+	process.exit(1);
+}
